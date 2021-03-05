@@ -5,8 +5,7 @@ import java.util.*;
 public class ShowcaseModel implements java.io.Serializable {
     private List<Category> categories = new LinkedList<Category>();
 
-    public ShowcaseModel() {
-    }
+    public ShowcaseModel() {}
 
     public void setCategories(List<Category> categories) {
         this.categories = categories;

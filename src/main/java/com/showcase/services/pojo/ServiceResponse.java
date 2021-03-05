@@ -1,7 +1,5 @@
 package com.showcase.services.pojo;
 
-import org.springframework.expression.spel.ast.BooleanLiteral;
-
 public class ServiceResponse implements java.io.Serializable {
 
     public Boolean success = true;

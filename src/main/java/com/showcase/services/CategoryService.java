@@ -6,9 +6,6 @@ import com.showcase.dl.*;
 import com.showcase.dl.exceptions.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.*;
-import org.springframework.beans.factory.serviceloader.ServiceFactoryBean;
-import org.springframework.boot.actuate.autoconfigure.metrics.ServiceLevelObjectiveBoundary;
-
 import java.util.*;
 
 @RestController
@@ -18,6 +15,10 @@ public class CategoryService {
 
     @GetMapping("/showcase/getCategories")
     public List<Category> getAll() {
+      try{
+      Thread.sleep(5000);
+    }catch(Exception e)
+    {}
         return showcaseModel.getCategories();
     }
 
@@ -163,4 +164,5 @@ public class CategoryService {
         serviceResponse.hasResult = true;
         return serviceResponse;
     }
+
 }
